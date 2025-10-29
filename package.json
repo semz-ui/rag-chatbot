@@ -9,11 +9,18 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@langchain/community": "^1.0.0",
+    "@langchain/core": "^1.0.2",
+    "@langchain/pinecone": "^1.0.0",
+    "@pinecone-database/pinecone": "^6.1.2",
     "@uploadthing/react": "^7.3.3",
+    "axios": "^1.13.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "langchain": "^1.0.2",
     "lucide-react": "^0.548.0",
     "next": "16.0.0",
+    "pdf-parse": "^2.4.5",
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "react-hot-toast": "^2.6.0",
