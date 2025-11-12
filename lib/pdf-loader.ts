@@ -1,7 +1,7 @@
 import { WebPDFLoader } from "@langchain/community/document_loaders/web/pdf";
 import { PDFLoader } from "@langchain/community/document_loaders/fs/pdf";
-import { RecursiveCharacterTextSplitter } from "langchain/text_splitter";
-import { Document } from "langchain/document";
+import { RecursiveCharacterTextSplitter } from "@langchain/textsplitters";
+import { Document } from "@langchain/core/documents";
 import axios from "axios";
 
 export type PDFSource = {
@@ -32,7 +32,7 @@ export async function getChunkedDocsFromPDF(pdfSource: PDFSource) {
       }
       case "buffer": {
         // Handle Buffer (e.g., from fs.readFile)
-        const pdfBlob = new Blob([pdfSource.source as Buffer], {
+        const pdfBlob = new Blob([pdfSource.source as any], {
           type: "application/pdf",
         });
         const loader = new WebPDFLoader(pdfBlob);
